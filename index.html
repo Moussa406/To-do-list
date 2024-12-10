@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="todo-container">
+        <div id="header">
+            <h1>To-Do-list</h1>
+        </div>  
+        <div id="to-form">
+            <input type="text" class="ajouter" name="ajouter-boite" id="ajouter-boite2" placeholder="Ajouter une tâches à effctuer">
+            <button id="button" onclick="ajouterTaches()">Ajouter</button>
+        </div>
+        <div class="taches">
+            <h2>Tâches à faire</h2>
+            <ul class="container" id="liste-container"></ul>
+        </div>
+        <div class="taches2">
+        <h2>Tâches terminées</h2>
+        <ul class= "container" id="liste-container2"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
