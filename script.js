@@ -8,23 +8,35 @@ function ajouterTaches(){
         alert("S'il vous plaît, ajoutez une tache");
         return;
     }
-
+  
     const li = document.createElement('li');
 
     li.innerHTML = `
     <label>
         <input type="checkbox">
-        <span>${taches}</span>
+        <span class = "taches-texte">${taches}</span>
     </label>
-    <span class="supprimer-btn">X</span>`;
+    <div class = "buttonAndDelete">
+    <button class="edit-btn">Modifier</button>
+    <span class="supprimer-btn">x</span>
+    </div>`;
 
-    
+
+    li.querySelector(".supprimer-btn").addEventListener("click", function () {
+        listeContainer.removeChild(li); 
+        
+    });
+    li.querySelector(".supprimer-btn").addEventListener("click", function () {
+        listeContainer2.removeChild(li); 
+    });
+
 
     listeContainer.appendChild(li);
     ajouterBoite2.value = '';
 
     //const terminerBtn = li.querySelector(".terminer-btn");
     const checkbox = li.querySelector("input");
+    const editBtn = li.querySelector(".edit-btn")
 
     checkbox.addEventListener("change", function () {
         if (checkbox.checked) {
@@ -35,8 +47,15 @@ function ajouterTaches(){
             listeContainer.appendChild(li);
         }
     });
+    editBtn.addEventListener("click", function () {
+        const taskText = li.querySelector(".taches-texte");
+        const nouveauTexte = prompt("Modifier la tâche :", taskText.textContent);
+        if (nouveauTexte) {
+            taskText.textContent = nouveauTexte;
+        }
+    });
+    
     ajouterBoite2.value = '';
 
 }
-
-
+document.getElementById("ajouter-btn").addEventListener("click", ajouterTaches);

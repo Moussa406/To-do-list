@@ -10,8 +10,10 @@ h1{
 h2{
     text-align: center;
 }
-
-
+li{
+    display: flex;
+    justify-content: space-between;
+}
 .ajouter {
     width: 500px;
     height: 50px;
@@ -21,6 +23,7 @@ h2{
     margin-left: 20px;
     width: 100px;
     background-color: greenyellow;
+    cursor: pointer;
 }
 #to-form{
     display: flex;
@@ -32,6 +35,7 @@ h2{
     margin-left: auto;
     margin-right: auto;
     height: 200px;
+
    
 }
 
@@ -48,3 +52,6 @@ h2{
     margin-right: auto;
 }
 
+.supprimer-btn{
+    cursor: pointer;
+}
