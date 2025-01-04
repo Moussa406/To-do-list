@@ -1,6 +1,7 @@
 const ajouterBoite2 = document.getElementById("ajouter-boite2");
 const listeContainer = document.getElementById("liste-container");
-const listeContainer2 = document.getElementById("liste-container2")
+const listeContainer2 = document.getElementById("liste-container2");
+
 
 function ajouterTaches(){
     const taches = ajouterBoite2.value;
@@ -13,14 +14,26 @@ function ajouterTaches(){
 
     li.innerHTML = `
     <label>
-        <input type="checkbox">
+        <input type="checkbox" class="custom-checkbox">
         <span class = "taches-texte">${taches}</span>
     </label>
     <div class = "buttonAndDelete">
-    <button class="edit-btn">Modifier</button>
-    <span class="supprimer-btn">x</span>
+        <button class="edit-btn">Modifier</button>
+        <select class="importance-dropdown">
+            <option disabled selected>Importance</option>
+            <option value="high">Haute</option>
+            <option value="low">Basse</option>
+        </select>
+        <span class="supprimer-btn">x</span>
     </div>`;
 
+    const dropdown = li.querySelector(".importance-dropdown");
+    const tacheTexte = li.querySelector(".taches-texte");
+
+    dropdown.addEventListener("change", function () {
+    if (dropdown.value === "high") {
+        tacheTexte.style.color = "red"; } 
+    });
 
     li.querySelector(".supprimer-btn").addEventListener("click", function () {
         listeContainer.removeChild(li); 
