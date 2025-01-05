@@ -20,7 +20,7 @@ function ajouterTaches(){
     <div class = "buttonAndDelete">
         <button class="edit-btn">Modifier</button>
         <select class="importance-dropdown">
-            <option disabled selected>Importance</option>
+            <option>Importance</option>
             <option value="high">Haute</option>
             <option value="low">Basse</option>
         </select>
@@ -32,7 +32,10 @@ function ajouterTaches(){
 
     dropdown.addEventListener("change", function () {
     if (dropdown.value === "high") {
-        tacheTexte.style.color = "red"; } 
+        tacheTexte.style.color = "red";
+     } else {
+        tacheTexte.style.color = "white";}
+
     });
 
     li.querySelector(".supprimer-btn").addEventListener("click", function () {
@@ -72,3 +75,10 @@ function ajouterTaches(){
 
 }
 document.getElementById("ajouter-btn").addEventListener("click", ajouterTaches);
+
+ajouterBoite2.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        ajouterTaches();
+    }
+});

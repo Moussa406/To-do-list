@@ -9,21 +9,28 @@
 </head>
 <body>
     <div id="todo-container">
+        
+    
         <div id="header">
-            <h1>To-Do-list</h1>
+            <div class="titre">
+                <h1>To-Do-list</h1>
+                <img src="img/checklist-6640235_1280.png" alt="bloc note">
+            </div>
         </div>  
         <div id="to-form">
             <input type="text" class="ajouter" name="ajouter-boite" id="ajouter-boite2" placeholder="Ajouter une tâches à effctuer">
-            <button id="button" onclick="ajouterTaches()">Ajouter</button>
+            <button id="ajouter-btn">Ajouter</button>
         </div>
-        <div class="taches">
-            <h2>Tâches à faire</h2>
-            <ul class="container" id="liste-container"></ul>
-        </div>
-        <div class="taches2">
-        <h2>Tâches terminées</h2>
-        <ul class= "container" id="liste-container2"></ul>
-        </div>
+    
+            <div class="taches">
+                <h2>Tâches à faire</h2>
+                <ul class="container" id="liste-container"></ul>
+            </div>
+            <div class="taches2">
+                <h2 class="finTaches">Tâches terminées</h2>
+                <ul class= "container" id="liste-container2"></ul>
+            </div>
+    
     </div>
     <script src="script.js"></script>
 </body>

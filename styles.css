@@ -1,49 +1,84 @@
 body{
-    background: linear-gradient(45deg,#0f0896,#3f2a80,#692cb1);
+    background: linear-gradient(45deg,#352fa1,#68569d,#9755e1);
 
 }
 
-h1{
-    
-    color: royalblue;
+.titre{
+    color: rgb(245, 247, 252);
     text-align: center;
+    font-style: italic;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+
 }
+
 
 h2{
-    margin-top: 65px;
+    margin-top: 155px;
     text-align: center;
     color: antiquewhite;
+    font-size: 60px;
     
 }
 li{
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
+    background-color: #1d0e4a;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px ;
+    padding-left: 10px;
+    padding-right: 10px;
+    
 }
 .ajouter {
-    width: 500px;
+    width: 580px;
     height: 50px;
 }
 
-#button{
+#ajouter-btn{
     margin-left: 20px;
-    width: 100px;
+    width: 150px;
     background-color: greenyellow;
     cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+#ajouter-btn:hover{
+    background-color: rgb(0, 255, 21);
+    transform: scale(1.1); 
 }
 #to-form{
     display: flex;
     justify-content: center;
+    
 }
 
 .taches, .taches2 {
     width: 800px;  
     margin-left: auto;
     margin-right: auto;
-    height: 400px;
-
-   
+    height: 600px;
 }
 
+.finTaches{
+    margin-top: 50px;
+    
+}
+
+.taches{
+    overflow-y: scroll;
+    scrollbar-width: auto;
+    width: 1000px;
+    
+}
+.taches2{
+    margin-top: auto;
+}
 .container{
     display: flex;
     justify-content: center;
@@ -54,23 +89,48 @@ li{
     text-align:start;
     width: 800px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 100px;
+    
+    
 }
 
-.supprimer-btn{
+.supprimer-btn {
+    display: inline-block;
+    background-color: #ff4d4d; 
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
     cursor: pointer;
-    border: 1px solid black;
-    padding: 10px;
+    transition: all 0.3s ease;
+    margin-left: 15px;
 }
-/* Style général pour cacher l'apparence native du checkbox */
+
+
+.supprimer-btn:hover {
+    background-color: #e60000; 
+    transform: scale(1.1); 
+}
+
+
+.supprimer-btn:active {
+    background-color: #cc0000; 
+    transform: scale(0.9); 
+}
+
 input[type="checkbox"].custom-checkbox {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 20px;
     height: 20px;
-    border: 2px solid violet; /* Couleur de la bordure */
-    border-radius: 4px; /* Coins arrondis */
+    border: 2px solid violet;
+    border-radius: 4px;
     background-color: white;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -78,18 +138,18 @@ input[type="checkbox"].custom-checkbox {
     vertical-align: middle;
 }
 
-/* État au survol */
-input[type="checkbox"].custom-checkbox:hover {
-    border-color: violet; /* Couleur de la bordure au survol */
-}
 
-/* Style lorsqu'il est coché */
-input[type="checkbox"].custom-checkbox:checked {
-    background-color: #4caf50; /* Couleur de fond lorsqu'il est coché */
+input[type="checkbox"].custom-checkbox:hover {
     border-color: violet;
 }
 
-/* Ajouter une coche (✔) lorsqu'il est coché */
+
+input[type="checkbox"].custom-checkbox:checked {
+    background-color: #4caf50; 
+    border-color: violet;
+}
+
+
 input[type="checkbox"].custom-checkbox:checked::after {
     content: '✔';
     font-size: 14px;
@@ -98,4 +158,53 @@ input[type="checkbox"].custom-checkbox:checked::after {
     text-align: center;
     line-height: 20px;
     font-weight: bold;
+}
+.edit-btn{
+    margin-left: 20px;
+    width: 100px;
+    background-color: greenyellow;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.edit-btn:hover{
+    background-color: rgb(0, 255, 21);
+    transform: scale(1.1); 
+}
+
+.edit-btn:active{
+    background-color: #4caf50;
+    transform: scale(0.9); 
+}
+.importance-dropdown{
+    margin-left: 20px;
+    width: 100px;
+    background-color: greenyellow;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 30px;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
+
+.importance-dropdown:hover{
+    background-color: rgb(0, 255, 21);
+    transform: scale(1.1); 
+}
+
+.taches-texte{
+    color: white;
+    
+}
+#liste-container2{
+    text-decoration: line-through;
+
+}
+
+img{
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 60px;
 }
